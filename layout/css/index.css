@@ -1,0 +1,102 @@
+body {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+}
+
+body,
+html {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.piano {
+    display: flex;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+
+.piano,
+.octave {
+    width: 100%;
+    height: auto;
+}
+
+.octave {
+    position: relative;
+    min-width: 150px;
+}
+
+.keys-container {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    z-index: 1;
+}
+
+.keys-container.sharps {
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.spacer {   
+    height: 100%;
+    flex: 0 0 calc(100% / 15.45);
+}
+
+.spacer.first, 
+.spacer.last {
+    flex: 0 0 calc(100% / 9.5);
+}
+
+.spacer.key-size {
+    flex: 0 0 calc(100% / 12.5);
+}
+
+.key {
+    border: 1px solid #000000;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    background-color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0;
+    flex: 0 0 calc(100% / 7);
+    overflow: hidden;
+}
+
+/* Toggle key label */
+.key .label {
+    /* display: none; */
+}
+
+.key:hover {
+    background-color: #eeeeee;
+}
+
+.key.sharp {
+    background-color: #000000;
+    color: #ffffff;
+    height: 100%;
+    border-color: #ffffff;
+    border-bottom-width: 2px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    flex: 0 0 calc(100% / 13);
+    height: 170px;
+}
+
+.key.sharp:hover {
+    background-color: #716f6f;
+}
