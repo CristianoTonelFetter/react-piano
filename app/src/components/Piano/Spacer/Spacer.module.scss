@@ -1,0 +1,13 @@
+.Spacer {   
+    height: 100%;
+    flex: 0 0 calc(100% / 15.45);
+}
+
+.Spacer.First, 
+.Spacer.Last {
+    flex: 0 0 calc(100% / 9.5);
+}
+
+.Spacer.KeySize {
+    flex: 0 0 calc(100% / 12.5);
+}

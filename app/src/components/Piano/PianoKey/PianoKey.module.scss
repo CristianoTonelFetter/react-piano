@@ -1,0 +1,43 @@
+
+.PianoKey {
+    border: 1px solid #000000;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    background-color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0;
+    flex: 0 0 calc(100% / 7);
+    overflow: hidden;
+
+    /* Label is hidden by default */
+    .Label {
+        display: none;
+    }
+    
+    .Label.Visible {
+        display: inline;
+    }
+
+    &:hover {
+        background-color: #eeeeee;
+    }
+    
+    &.Sharp {
+        background-color: #000000;
+        color: #ffffff;
+        height: 100%;
+        border-color: #ffffff;
+        border-bottom-width: 2px;
+        border-top-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+        flex: 0 0 calc(100% / 13);
+        height: 170px;
+    }
+    
+    &.Sharp:hover {
+        background-color: #716f6f;
+    }
+}
